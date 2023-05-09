@@ -38,6 +38,14 @@ context('Actions', () => {
     cy.get('.action-focus').focus()
       .should('have.class', 'focus')
       .prev().should('have.attr', 'style', 'color: orange;')
+
+    cy.get('#password1').focus()
+      .should('have.class', 'focus')
+      .prev().should('have.attr', 'style', 'color: orange;')
+
+    cy.get('[placeholder="Password"]').focus()
+      .should('have.class', 'focus')
+      .prev().should('have.attr', 'style', 'color: orange;')
   })
 
   it('.blur() - blur off a DOM element', () => {
