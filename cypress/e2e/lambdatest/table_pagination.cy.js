@@ -93,7 +93,7 @@ describe('Table Pagination', () => {
     })
   })
 
-  it("First page selected - should keep user on the last page when prev (<) button is pressed", () => {
+  it("First page selected - should keep user on the first page when prev (<) button is pressed", () => {
     const pagination = [{
       selectedNumberOfRows: 5,
       expectedRowsNumber: 5,
