@@ -1,17 +1,11 @@
 /// <reference types="cypress" />
 
-Cypress.on('uncaught:exception', () => {
-  // returning false here prevents Cypress from
-  // failing the test
-  return false
-})
-
 describe("Login", () => {
   beforeEach(() => {
     cy.intercept({ resourceType: /xhr|fetch/ }, { log: false });
   })
   
-  it("Should login with valid credentials", () => {
+  it("Should login successfully when using valid credentials", () => {
     const userAuth = Cypress.env('userAuth')
   
     cy.login(userAuth.userName, userAuth.password);
